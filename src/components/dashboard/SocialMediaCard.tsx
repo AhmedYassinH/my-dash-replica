@@ -18,7 +18,7 @@ const SocialMediaCard: React.FC = () => {
   const options = {
     plugins: {
       legend: {
-        position: "bottom" as const,
+        position: "right" as const,
         labels: {
           padding: 20,
           usePointStyle: true,
