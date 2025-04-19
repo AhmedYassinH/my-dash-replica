@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bar } from "react-chartjs-2";
+
 import Chart from "chart.js/auto";
 
 const SalesByAgeChart: React.FC = () => {
