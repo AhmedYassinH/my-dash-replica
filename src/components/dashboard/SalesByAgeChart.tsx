@@ -94,7 +94,7 @@ const SalesByAgeChart: React.FC = () => {
       chartRef.current = new Chart(ctx, {
         type: "bar",
         data: data,
-        options: options,
+        options: options as any,
       });
     }
 
