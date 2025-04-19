@@ -130,15 +130,7 @@ const RevenueChart: React.FC = () => {
     };
   }, [data, options]);
 
-  const totalFacebookAds = data.datasets[0].data.reduce(
-    (acc: any, curr: any) => acc + curr,
-    0
-  );
-  const totalGoogleAds = data.datasets[1].data.reduce(
-    (acc: any, curr: any) => acc + curr,
-    0
-  );
-  const totalRevenue = totalFacebookAds + totalGoogleAds;
+ 
 
   const formatCurrency = (value: number): string => {
     return new Intl.NumberFormat("en-US", {
@@ -153,9 +145,6 @@ const RevenueChart: React.FC = () => {
     <Card className="col-span-2">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-base font-normal">Revenue</CardTitle>
-        <div className="text-sm text-muted-foreground">
-          Total: {formatCurrency(totalRevenue)}
-        </div>
       </CardHeader>
       <CardContent>
         <div className="h-[300px] w-full">
@@ -166,22 +155,10 @@ const RevenueChart: React.FC = () => {
             <div className="text-sm font-medium text-muted-foreground">
               Facebook Ads
             </div>
-            <div className="text-lg font-semibold">
-              {formatCurrency(totalFacebookAds)}
-            </div>
-            <div className="text-xs text-green-500">
-              +{Math.round((totalFacebookAds / totalRevenue) * 100)}%
-            </div>
           </div>
           <div className="text-center">
             <div className="text-sm font-medium text-muted-foreground">
               Google Ads
-            </div>
-            <div className="text-lg font-semibold">
-              {formatCurrency(totalGoogleAds)}
-            </div>
-            <div className="text-xs text-green-500">
-              +{Math.round((totalGoogleAds / totalRevenue) * 100)}%
             </div>
           </div>
         </div>
