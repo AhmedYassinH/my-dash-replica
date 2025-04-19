@@ -119,7 +119,7 @@ const RevenueChart: React.FC = () => {
       chartRef.current = new ChartJS(ctx, {
         type: "line",
         data: data,
-        options: options,
+        options: options as any,
       });
     }
 
@@ -131,11 +131,11 @@ const RevenueChart: React.FC = () => {
   }, [data, options]);
 
   const totalFacebookAds = data.datasets[0].data.reduce(
-    (acc: number, curr: number) => acc + curr,
+    (acc: any, curr: any) => acc + curr,
     0
   );
   const totalGoogleAds = data.datasets[1].data.reduce(
-    (acc: number, curr: number) => acc + curr,
+    (acc: any, curr: any) => acc + curr,
     0
   );
   const totalRevenue = totalFacebookAds + totalGoogleAds;
