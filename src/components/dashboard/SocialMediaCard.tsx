@@ -26,7 +26,6 @@ const SocialMediaCard: React.FC = () => {
         },
       },
     },
-    cutout: "60%",
     maintainAspectRatio: false,
   };
 
