@@ -8,7 +8,11 @@ const SocialMediaCard: React.FC = () => {
     datasets: [
       {
         data: [35, 25, 22, 18],
-        backgroundColor: ["#4285F4", "#1DA1F2", "#E1306C", "#0A66C2"],
+        backgroundColor: [   '#6a6c6e',
+        '#bf380f',
+        '#4e84d4',
+        '#212121',
+      ],
         hoverBackgroundColor: ["#2A75F3", "#0D94E3", "#D91A5B", "#0559B3"],
         borderWidth: 0,
       },
